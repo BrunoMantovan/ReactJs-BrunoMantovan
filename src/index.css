@@ -1,0 +1,18 @@
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+  margin-bottom: 0;
+}
+li{
+  margin-bottom: 0;
+}
+a{
+  text-decoration: none;
+  
+}
+body{
+  background-color: rgb(165, 220, 230);
+}
