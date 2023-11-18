@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "starwars_symbols";
+    src: url("../../assets/Fonts/SF_Distant_Galaxy_Symbols_Revised.ttf");
+  }
+
+.tarjeta{
+    height: 400px;
+    width: 300px;
+    color: rgb(182, 181, 181);
+    margin: 30px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:15px;
+    padding-bottom: 30px;
+    -webkit-box-shadow:0px 0px 15px 5px rgba(204,204,204,0.27);
+-moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.27);
+box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.27);
+}
+.tarjeta img{
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.tarjeta h2{
+    margin-bottom: 20px;
+}
+.tarjeta section{
+    width: 100%;
+    padding: 0 20px;
+    font-size: 25px;
+    text-align: start;
+    color: white;
+}
+.tarjeta section p span{
+    font-family: "starWars_symbols", sans-serif;
+}
+.tarjeta footer{
+    display: flex;
+    padding: 0 20px;
+    width: 100%;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: end;
+}
+.tarjeta footer p{
+    
+}
+.tarjeta footer button{
+    width: 70px;
+    height: 40px;
+    background-color: yellow;
+    border-style: none;
+    border-radius: 10px;
+    font-family: 'Archivo', sans-serif;;
+    font-weight: 500;
+    cursor: pointer;
+}

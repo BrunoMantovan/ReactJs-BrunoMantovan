@@ -1,3 +1,9 @@
+
+.div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .div h1{
     text-align: center;
     margin-top: 20px;

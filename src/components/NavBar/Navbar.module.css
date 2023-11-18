@@ -1,17 +1,26 @@
+@font-face {
+  font-family: "starwars_symbols";
+  src: url("../../assets/Fonts/SF_Distant_Galaxy_Symbols_Revised.ttf");
+}
+@font-face {
+  font-family: "starwars_font";
+  src: url("../../assets/Fonts/Starjedi.ttf");
+}
 .navbar{
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
   width: 100%;
-  height: 80px;
+  height: 100px;
   margin: 0;
   align-items: center;
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
 }
 .navbar h1{
   font-size: 30px;
-  color: rgb(209, 198, 198);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #faeb1c;
+  font-family: "starwars_font";
+  letter-spacing: 2px;
 }
 .nav-menu {
   display: grid;
@@ -28,21 +37,26 @@
   margin: 0 5px;
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 100px;
+  font-family: "starwars_symbols";
+  justify-content: center;
+  min-width: 171px;
 }
 .nav-menu li a{
+  font-size: 18px;
+  padding: 0.5rem 0.5rem;
+  color: #faeb1c;
+}
+.nav-menu li:hover{
+  background-color: #faeb1c;
+  font-family: 'Archivo', sans-serif;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.nav-menu li:hover a{
+  color: black;
   font-size: 22px;
   font-weight: 900;
-  color: rgb(209, 198, 198);
-  padding: 0.5rem 1rem;
-  font-family: 'Archivo', sans-serif;
-  border-radius: 4px;
-}
-.nav-menu li a:hover {
-  background-color: #d5ff18;
-  color: black;
-  
-  transition: all 0.5s ease-out;
 }
 .menu{
   display: flex;
@@ -56,7 +70,7 @@
 .fa-times, .fa-bars{
   color: #fff
 }
-@media (max-width:960px) {
+@media (max-width:1090px) {
   .nav-menu{
   display: flex;
   flex-direction: column;
