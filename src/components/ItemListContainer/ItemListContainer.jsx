@@ -5,7 +5,7 @@ import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
 
-export default function ItemListContainer({titulo}) {
+export default function ItemListContainer() {
   
   const [array, setData] = useState([]);
   const {categoryId} = useParams();
@@ -22,7 +22,7 @@ export default function ItemListContainer({titulo}) {
 
   return (
     <>
-      <h1>{titulo}</h1>
+      <h1 className={estilos.titulo}> {categoryId ? categoryId : "Rebel? Imperial? Doesnt matter. If you have got the credit we sell it" }</h1>
         <div className={estilos.div}>
           
           {array.filter(c => categoryId ? c.category == categoryId : true).map((p)=>(
