@@ -51,7 +51,6 @@
   background-color: #faeb1c;
   font-family: 'Archivo', sans-serif;
   transition: all 0.5s ease-out;
-  cursor: pointer;
 }
 .nav-menu li:hover a{
   color: black;

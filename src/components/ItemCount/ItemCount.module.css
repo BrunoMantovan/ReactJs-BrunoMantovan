@@ -1,0 +1,46 @@
+.contador{
+    width: 236px;
+    border-radius: 10px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contador div{
+    display: flex;
+    align-items: center;
+}
+.contador div button{
+   border-radius: 10px;
+   background-color: rgb(158, 148, 12);
+   width: 35px;
+   height: 35px;
+   border-style: none;
+   transition: all 0.3s;
+}
+.contador div button:hover{
+    background-color: yellow;
+    -webkit-box-shadow:0px 0px 12px 1px rgba(208,222,102,0.9);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
+    box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
+}
+.contador h3{
+    font-weight: 400;
+    margin: 0 7px;
+}
+.buy{
+    width: 100px;
+    height: 60px;
+    background-color: yellow;
+    border-style: none;
+    border-radius: 10px;
+    font-family: 'Archivo', sans-serif;;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.buy:hover{
+    -webkit-box-shadow:0px 0px 12px 1px rgba(208,222,102,0.9);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
+    box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
+}
