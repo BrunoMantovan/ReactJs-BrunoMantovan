@@ -11,13 +11,14 @@ export default function ItemList({name, img, price, stock, id}) {
                     <picture>
                         <img src={img} alt={name} />
                     </picture>
+                    <div>
                     <h2>{name}</h2>
+                    </div>
                     <section>
                         <p><span>$ </span>{price}</p>
                     </section>
                     <footer>
                         <p>stock: {stock}</p>
-                        <button>Details</button>
                     </footer>
                 </div>
             </NavLink>

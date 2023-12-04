@@ -18,8 +18,8 @@ export default function ItemDetail({img, name, model, crew , passengers, length,
                     <h4>{model}</h4>
                     <p>Crew: {crew}</p>
                     <p>Passengers: {passengers}</p>
-                    <p>legth: {length}</p>
-                    <p>manufactured by: {manufacturer}</p>
+                    <p>Length: {length}</p>
+                    <p>Manufactured by: {manufacturer}</p>
                 </div>
                     
                 <div className={estilos.buy}>

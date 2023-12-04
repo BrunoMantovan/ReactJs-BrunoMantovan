@@ -10,15 +10,16 @@
     display: flex;
     align-items: center;
 }
-.contador div button{
+.contador_button{
    border-radius: 10px;
-   background-color: rgb(158, 148, 12);
+   background-color: rgb(226, 213, 34);
    width: 35px;
    height: 35px;
    border-style: none;
    transition: all 0.3s;
+   cursor: pointer;
 }
-.contador div button:hover{
+.contador_button:hover{
     background-color: yellow;
     -webkit-box-shadow:0px 0px 12px 1px rgba(208,222,102,0.9);
     -moz-box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
@@ -27,6 +28,13 @@
 .contador h3{
     font-weight: 400;
     margin: 0 7px;
+}
+.contador_button_off{
+    border-radius: 10px;
+    background-color: rgba(158, 149, 20, 0.774);
+    width: 35px;
+    height: 35px;
+    border-style: none;
 }
 .buy{
     width: 100px;

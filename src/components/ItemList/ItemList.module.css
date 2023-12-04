@@ -6,9 +6,10 @@
 .tarjetaPadre{
     height: 400px;
     width: 300px;
-    margin: 30px;
+    
 }
 .tarjeta{
+    width: 100%;
     color: #b6b5b5;
     background-color: black;
     display: flex;
@@ -16,9 +17,15 @@
     align-items: center;
     border-radius:15px;
     padding-bottom: 30px;
-    -webkit-box-shadow:0px 0px 15px 5px rgba(204,204,204,0.27);
-    -moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.27);
-    box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.27);
+    -webkit-box-shadow:0px 0px 10px 3px rgba(204,204,204,0.27);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(204,204,204,0.27);
+    box-shadow: 0px 0px 10px 3px rgba(204,204,204,0.27);
+    transition: all 0.3s;
+}
+.tarjeta:hover{
+    -webkit-box-shadow:0px 0px 10px 3px rgba(243, 240, 240, 0.527);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(243, 240, 240, 0.527);
+    box-shadow: 0px 0px 10px 3px rgba(243, 240, 240, 0.527);
 }
 .tarjeta img{
     width: 100%;
@@ -27,8 +34,16 @@
     border-top-left-radius: 15px;
     margin-bottom: 10px;
 }
-.tarjeta h2{
+.tarjeta div{
+    padding: 10px;
+    width: 100%;
+    
+}
+.tarjeta div h2{
     margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .tarjeta section{
     width: 100%;
@@ -45,11 +60,11 @@
     display: flex;
     padding: 0 20px;
     width: 100%;
-    margin-top: auto;
+    margin-top: 40px;
     justify-content: space-between;
     align-items: end;
 }
-.tarjeta footer button{
+/* .tarjeta footer button{
     width: 70px;
     height: 40px;
     background-color: yellow;
@@ -58,4 +73,4 @@
     font-family: 'Archivo', sans-serif;;
     font-weight: 500;
     cursor: pointer;
-}
+} */

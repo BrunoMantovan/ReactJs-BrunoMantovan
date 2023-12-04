@@ -19,9 +19,9 @@ const [click, setClick] = useState(false)
         <li onClick={closeMenu}> <NavLink to={"/"}>Home</NavLink></li>
         <li onClick={closeMenu}> <NavLink to={"/category/vehicles"}>Vehicles</NavLink></li>
         <li onClick={closeMenu}> <NavLink to={"/category/spaceships"}>Spaceships</NavLink></li>
+        <Cartwidget/>
       </ul>
       <div className={estilos.menu}>
-        <Cartwidget/>
         <div className={estilos['menu-icon']} onClick={handleClick}>
         <i className={`${click ? "fas fa-times" : "fas fa-bars"} ${click ? estilos['fa-times'] : estilos['fa-bars']}`} ></i>
       </div>
