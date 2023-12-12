@@ -1,6 +1,6 @@
 import {initializeApp} from "firebase/app"
 import {getFirestore, addDoc, collection} from 'firebase/firestore'
-import dataArray from '../../../public/Json/vehicles.json';
+import dataArray from "../../assets/Json/vehicles.json";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCEJoZrBajjtg1497Pj5RlhcVF2eoKCN9g",

@@ -1,32 +1,32 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import estilos from "./ItemDetailContainer.module.css"
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import {collection, getDocs, query, doc} from 'firebase/firestore'
+import { db } from '../firebase/client';
 
 export default function ItemDetailContainer() {
 
-const [array, setData] = useState([]);
+const [ProductArray, setProductArray] = useState([]);
 const {itemId} = useParams();
-
   
-  useEffect(()=>{
-    const url = ("/public/Json/vehicles.json")
-    
+useEffect(()=>{
 
-    axios.get(url)
-    .then((response)=> setData(response.data.results))
-    
-  }, [itemId])
+  const productsRef = query(collection(db, "productos"))
 
+  getDocs(productsRef)  
+  .then(snapshot =>{console.log(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))
+  setProductArray(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))})
+    
+}, [itemId])
 
   return (
     <>
 
         <div className={estilos.div}>
-          {array.filter(c =>itemId ? c.id == itemId : true).map((p)=>(
-            <ItemDetail key={p.model} img={p.img} name={p.name} price={p.cost_in_credits} stock={"10"} model={p.model} crew={p.crew} passengers={p.passengers} length={p.length} manufacturer={p.manufacturer}/>
+          {ProductArray.filter(c =>itemId ? c.id == itemId : true).map((p)=>(
+            <ItemDetail key={p.id} img={p.img} name={p.name} price={p.cost_in_credits} stock={"10"} model={p.model} crew={p.crew} passengers={p.passengers} length={p.length} manufacturer={p.manufacturer} id={p.id}/>
           ))}
         </div>
     </>

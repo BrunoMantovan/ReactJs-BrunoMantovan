@@ -1,0 +1,12 @@
+.contenedor{
+position: relative;
+}
+.link{
+    width: 50px
+}
+.numero{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    color:white;
+}

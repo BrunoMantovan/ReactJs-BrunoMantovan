@@ -2,7 +2,7 @@ import React from 'react'
 import estilos from "./ItemDetail.module.css"
 import ItemCount from '../ItemCount/ItemCount'
 
-export default function ItemDetail({img, name, model, crew , passengers, length, manufacturer, price, stock}) {
+export default function ItemDetail({img, name, model, crew , passengers, length, manufacturer, price, stock, id}) {
   return (
     <>
         <div className={estilos.tarjeta}>
@@ -23,14 +23,12 @@ export default function ItemDetail({img, name, model, crew , passengers, length,
                 </div>
                     
                 <div className={estilos.buy}>
-                    
                     <div>
-                    <ItemCount stock={stock}/>
+                    <ItemCount stock={stock} id={id} name={name} price={price} img={img}/>
                     <p>Stock: {stock}</p>
                     </div>
                 </div>
             </section>
-        
         </div>
     </>
   )

@@ -1,0 +1,38 @@
+.tarjeta{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    background-color:khaki;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    font-family: var(--main-font);
+}
+.tarjeta img{
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+}
+.tarjeta span{
+    font-family: var(--symbols);
+    font-weight: 100;
+}
+.button{
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 3px;
+    transition: all .3s;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(228, 111, 111);
+}
+.button:active{
+    background-color: rgba(228, 111, 111, 0.692);
+}

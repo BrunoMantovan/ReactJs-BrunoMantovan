@@ -1,8 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Ecommerce
 
-Currently, two official plugins are available:
+El sitio es de venta de naves del universo de Star Wars
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Para lanzar el proyecto
+
+```bash
+npm run dev
+```
+
+#Librerias
+
+ninguna
+
+#Fuentes
+
+SF_Distant_Galaxy_Symbols_Revised.ttf
+
+Starjedi.ttf
+
+```css
+@font-face {
+    font-family: "starwars_font";
+    src: url("../../assets/Fonts/Starjedi.ttf");
+}
+@font-face {
+    font-family: "starwars_symbols";
+    src: url("../../assets/Fonts/SF_Distant_Galaxy_Symbols_Revised.ttf");
+}
+```
+
+#API
+
+La información está sacada de https://swapi.dev

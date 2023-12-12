@@ -12,15 +12,12 @@ export default function ItemListContainer() {
 
   
   useEffect(()=>{
-    /* const url = ("/public/Json/vehicles.json") */
     const productsRef = query(collection(db, "productos"))
 
-    getDocs(productsRef)
-    
+    getDocs(productsRef)    
     .then(snapshot =>{console.log(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))
     setProductArray(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))})
-    /* axios.get(url)
-    .then((response)=> setProductArray(response.data.results)) */
+
   }, [categoryId])
 
 

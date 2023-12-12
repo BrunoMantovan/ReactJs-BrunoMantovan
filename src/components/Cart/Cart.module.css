@@ -1,0 +1,7 @@
+.cart{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+    padding: 20px 10%;
+    width: 100%;
+}

@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Playfair+Display:ital,wght@1,700&display=swap');
+@font-face {
+  font-family: "starwars_symbols";
+  src: url("../src/assets/Fonts/SF_Distant_Galaxy_Symbols_Revised.ttf");
+}
+@font-face {
+  font-family: "starwars_font";
+  src: url("../src/assets/Fonts/Starjedi.ttf");
+}
 
 *, *::after, *::before{
   margin: 0;
@@ -17,4 +25,9 @@ a{
 }
 body{
   background-color: #242424;
+}
+:root{
+  --symbols: "starWars_symbols", sans-serif;
+  --main-font: 'Archivo', sans-serif;
+  --sw-font: "starwars_font", sans-serif;
 }
