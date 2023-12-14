@@ -18,7 +18,7 @@
     font-family: var(--symbols);
     font-weight: 100;
 }
-.button{
+.remove{
     border: none;
     background-color: transparent;
     width: 20px;
@@ -26,13 +26,13 @@
     position: absolute;
     top: 5px;
     right: 5px;
-    border-radius: 3px;
+    border-radius: 50%;
     transition: all .3s;
 }
-.button:hover{
+.remove:hover{
     cursor: pointer;
-    background-color: rgb(228, 111, 111);
+    background-color: var(--red);
 }
-.button:active{
-    background-color: rgba(228, 111, 111, 0.692);
+.remove:active{
+    background-color: rgba(228, 111, 111, 0.69);
 }

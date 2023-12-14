@@ -10,7 +10,7 @@
 }
 .navbar h1{
   font-size: 30px;
-  color: #faeb1c;
+  color: var(--yellow);
   font-family: var(--sw-font);
   letter-spacing: 2px;
 }
@@ -38,10 +38,10 @@
 .nav-menu li a{
   font-size: 18px;
   padding: 0.5rem 0.5rem;
-  color: #faeb1c;
+  color: var(--yellow);
 }
 .nav-menu li:hover{
-  background-color: #faeb1c;
+  background-color: var(--yellow);
   font-family: var(--main-font);
   transition: all 0.5s ease-out;
 }

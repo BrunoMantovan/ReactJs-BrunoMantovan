@@ -30,4 +30,8 @@ body{
   --symbols: "starWars_symbols", sans-serif;
   --main-font: 'Archivo', sans-serif;
   --sw-font: "starwars_font", sans-serif;
+  --yellow: rgb(226, 213, 34);
+  --active-yellow: rgba(226, 213, 34, 0.65);
+  --red: rgb(228, 111, 111);
+  --red-active: rgba(228, 111, 111, 0.69);
 }

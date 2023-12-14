@@ -24,13 +24,13 @@
     }
     .titulo{
         text-align: center;
-        color: #faeb1c;
+        color: var(--yellow);
         text-align: center;
         margin: 40px 0;
         font-family: var(--sw-font);
         letter-spacing: 4px;
         text-shadow: 1px 5px 5px #000000;
-        font-size: 20px;
+        font-size: 2px;
     }
     .div{
         gap: 30px 30px;

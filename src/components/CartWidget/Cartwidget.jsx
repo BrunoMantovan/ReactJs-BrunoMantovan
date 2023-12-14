@@ -10,8 +10,8 @@ const {total} = useContext(CartContext);
 
   return (
     <div className={estilos.contenedor}>
-      <NavLink to={"/cart"}><img className={estilos.link} src={img} alt="cart" /></NavLink>
-      <span className={estilos.numero}>{total}</span>
+      <NavLink className={estilos.link} to={"/cart"}><img className={estilos.img} src={img} alt="cart" /></NavLink>
+      <div className={total >=1 ? estilos.contenedor_numero : estilos.vacio }><span className={estilos.numero}>{total}</span></div>
     </div>
   )
 }

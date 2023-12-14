@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "starwars_symbols";
-    src: url("../../assets/Fonts/SF_Distant_Galaxy_Symbols_Revised.ttf");
-}
-
 .tarjeta{
     margin: 15px 0;
     display: grid;
@@ -53,7 +48,7 @@
     color: #b6b5b5;
 }
 .descripcion div h1 span{
-    font-family: "starWars_symbols", sans-serif;
+    font-family: var(--symbols);
     font-weight: 100;
 }
 .buy{

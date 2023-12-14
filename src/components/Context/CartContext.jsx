@@ -8,11 +8,12 @@ const CartContextComponent = ({children}) => {
 
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-
+  const [price, setPrice] = useState(0);
   useEffect(()=>{
     const newTotal = cart.reduce((acumulador, e) => acumulador + e.cantidad, 0);
+    const newPrice = cart.reduce((acumulador, e) => acumulador + e.price, 0);
     setTotal(newTotal);
-    console.log(cart)
+    setPrice(newPrice);
   }, [cart])
 
 
@@ -28,11 +29,17 @@ const CartContextComponent = ({children}) => {
     setCart(prevCart => [...prevCart, cartItem]);
     
   }
+
   }
 
+  function RemoveItem(id){
+    const itemIndex = cart.findIndex(e => e.id == id);
+    const newCart = [...cart.slice(0, itemIndex), ...cart.slice(itemIndex + 1)];
+    setCart(newCart);
+  }
 
   return (
-    <CartContext.Provider value={{cart, total, addItem}}>
+    <CartContext.Provider value={{cart, total, addItem, price, RemoveItem, setCart}}>
         {children}
     </CartContext.Provider>
   )

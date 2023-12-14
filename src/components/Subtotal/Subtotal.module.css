@@ -1,0 +1,50 @@
+.subtotal{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 220px;
+}
+.costs, .total{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.costs, .total{
+    font-family: var(--main-font);
+    font-size: 18px;
+}
+.costs p span, .total p span{
+    font-family: var(--symbols);
+    font-weight: 100;
+}
+.total p{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 22px;
+}
+.checkout_button{
+    width: 35%;
+    align-self: center;
+    text-align: center;
+    height: 30px;
+    cursor: pointer;
+    background-color:var(--yellow);
+    border-radius: 4px;
+    border: none;
+    font-family: var(--main-font);
+    font-weight: 600;
+    transition: all .3s;
+}
+.checkout_button:hover{
+    -webkit-box-shadow:0px 0px 12px 1px rgba(208,222,102,0.9);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
+    box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
+}
+.checkout_button:active{
+    background-color: var(--active-yellow);
+}
+.none{
+    display: none;
+}

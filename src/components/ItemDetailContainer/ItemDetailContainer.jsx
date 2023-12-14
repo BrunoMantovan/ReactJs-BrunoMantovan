@@ -26,7 +26,7 @@ useEffect(()=>{
 
         <div className={estilos.div}>
           {ProductArray.filter(c =>itemId ? c.id == itemId : true).map((p)=>(
-            <ItemDetail key={p.id} img={p.img} name={p.name} price={p.cost_in_credits} stock={"10"} model={p.model} crew={p.crew} passengers={p.passengers} length={p.length} manufacturer={p.manufacturer} id={p.id}/>
+            <ItemDetail key={p.id} img={p.img} name={p.name} price={p.cost_in_credits} stock={p.stock} model={p.model} crew={p.crew} passengers={p.passengers} length={p.length} manufacturer={p.manufacturer} id={p.id}/>
           ))}
         </div>
     </>
