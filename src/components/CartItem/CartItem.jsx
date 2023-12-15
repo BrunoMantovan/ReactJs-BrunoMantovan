@@ -12,7 +12,7 @@ export default function (props) {
         <h3>{props.name}</h3>
         <p>x{props.quantity}</p>
         <h2><span>$ </span>{props.price}</h2>
-        <button className={estilos.remove} onClick={() => RemoveItem(props.id)} >X</button>
+        <button className={estilos.remove} onClick={() => RemoveItem(props.id, props.quantity)} >X</button>
     </div>
   )
 }

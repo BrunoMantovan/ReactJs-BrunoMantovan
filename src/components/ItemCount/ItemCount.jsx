@@ -21,6 +21,7 @@ export default function ItemCount(props) {
             img,
             cantidad: numero
         }
+        const stock = props.stock;
         addItem(cartItem);
     }
 

@@ -15,8 +15,7 @@ export default function ItemListContainer() {
     const productsRef = query(collection(db, "productos"))
 
     getDocs(productsRef)    
-    .then(snapshot =>{console.log(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))
-    setProductArray(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))})
+    .then(snapshot =>setProductArray(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}))))
 
   }, [categoryId])
 

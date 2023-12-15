@@ -9,14 +9,14 @@ export default function Subtotal() {
     let finalPrice = shipping + price;
 
   return (
-    <section className={estilos.subtotal}>
+    <section className={window.location.pathname === '/cart' ? estilos.subtotal : `${estilos.subtotal} ${estilos.subtotal2}`}>
         <div className={estilos.costs}><p>Products({total})</p> <p><span>$</span>{price}</p></div>
         <div className={estilos.costs}><p>Shipping</p> <p><span>$</span>{shipping}</p></div>
         <hr />
         <div className={estilos.total}><p>Total</p> <p><span>$</span>{finalPrice}</p></div>
 
         <NavLink to={`/checkout`} className={window.location.pathname === '/cart' ? estilos.checkout_button : estilos.none}>
-            <button className={estilos.checkout_button} >Checkout</button>
+            <button className={window.location.pathname === '/cart' ? estilos.checkout_button : estilos.none} >Checkout</button>
         </NavLink>
     </section>
   )
