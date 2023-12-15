@@ -14,7 +14,6 @@
 }
 .tarjeta picture{
     height: 680px;
-    display: grid;
     padding-right: 10px;
 }
 .tarjeta picture img{
@@ -22,8 +21,7 @@
     width: 100%;
     height: 680px;
     align-self: center;
-    border-radius: 10px;
-    
+    border-radius: 10px; 
 }
 .descripcion{
     padding: 50px 20px;
@@ -35,10 +33,6 @@
     border-left: 3px solid rgba(252, 252, 148, 0.644);
     border-radius: 10px;
 }
-.datos p{
-    font-size: 20px;
-    margin: 3px 0;
-} 
 .datos{
     height: 75px;
     display: flex;
@@ -47,6 +41,10 @@
     margin-bottom: 25px;
     color: #b6b5b5;
 }
+.datos p{
+    font-size: 20px;
+    margin: 3px 0;
+} 
 .descripcion div h1 span{
     font-family: var(--symbols);
     font-weight: 100;
@@ -54,10 +52,61 @@
 .buy{
     width: 100%;
     align-self: end;
-    justify-self: end;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
 .buy p{
     text-align: end;
+}
+
+@media (max-width:1024px) {
+    .tarjeta{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        width: 75%;
+        height: 1000px;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .tarjeta picture{
+        height: 400px;
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    .tarjeta picture img{
+        height: 400px;
+    }
+    .descripcion{
+        padding: 50px 30px;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        border-bottom: none;
+        border: 3px solid rgba(252, 252, 148, 0.644);
+        border-top-right-radius:  0;
+        border-top-left-radius: 0;
+    }
+}
+@media (max-width:480px){
+    .tarjeta{
+        width: 75%;
+        height: 900px;
+    }
+    .tarjeta picture{
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tarjeta picture img{
+        width: 75%;
+        height: 200px;
+    }
+    .descripcion{
+        padding: 50px 10px;
+    }
+    .datos p{
+        font-size: 15px;
+        margin: 3px 0;
+    } 
 }

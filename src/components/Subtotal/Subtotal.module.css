@@ -27,7 +27,7 @@
     font-weight: 600;
     font-size: 22px;
 }
-.checkout_button{
+.checkout_link, .checkout_button{
     width: 35%;
     align-self: center;
     text-align: center;
@@ -40,14 +40,25 @@
     font-weight: 600;
     transition: all .3s;
 }
-.checkout_button:hover{
+.checkout_button{
+    width: 100%;
+}
+.checkout_link:hover{
     -webkit-box-shadow:0px 0px 12px 1px rgba(208,222,102,0.9);
     -moz-box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
     box-shadow: 0px 0px 12px 1px rgba(208,222,102,0.9);
 }
-.checkout_button:active{
+.checkout_link:active{
     background-color: var(--active-yellow);
 }
 .none{
     display: none;
+}
+@media (max-width: 768px) {
+    .checkout_link, .checkout_button{
+        height: 50px;
+    }
+    .subtotal{
+        max-height: 240px;
+    }
 }

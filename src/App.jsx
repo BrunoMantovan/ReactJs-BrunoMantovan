@@ -7,6 +7,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CartContextComponent from './components/Context/CartContext'
 import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout'
+import Footer from './components/Footer/Footer'
+import OrderSearch from './components/OrderSearch/OrderSearch'
 
 function App() {
     return(
@@ -20,10 +22,13 @@ function App() {
                         <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
                         <Route path='/cart' element={<Cart/>}/>
                         <Route path='/checkout' element={<Checkout/>}/>
+                        <Route path='/order search' element={<OrderSearch/>}/>
                         <Route path='*' element={<h2>404 NOT FOUND</h2>}/> 
                     </Routes>
+                    <Footer/>
                 </Router>
-            </CartContextComponent>    
+            </CartContextComponent>
+            
         </>
     )
 }

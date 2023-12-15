@@ -15,7 +15,7 @@ export default function Subtotal() {
         <hr />
         <div className={estilos.total}><p>Total</p> <p><span>$</span>{finalPrice}</p></div>
 
-        <NavLink to={`/checkout`} className={window.location.pathname === '/cart' ? estilos.checkout_button : estilos.none}>
+        <NavLink to={`/checkout`} className={window.location.pathname === '/cart' ? estilos.checkout_link : estilos.none}>
             <button className={window.location.pathname === '/cart' ? estilos.checkout_button : estilos.none} >Checkout</button>
         </NavLink>
     </section>

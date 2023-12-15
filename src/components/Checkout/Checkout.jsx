@@ -4,10 +4,15 @@ import estilos from "./Checkout.module.css"
 import { CartContext } from '../Context/CartContext';
 import {addDoc, collection} from 'firebase/firestore'
 import { db } from '../firebase/client';
+import Swal from 'sweetalert2';
+import {useNavigate } from 'react-router-dom';
+
 
 export default function Checkout() {
 
-  const {cart, price, setCart, RemoveItem, setIsLoading, isLoading} = useContext(CartContext);
+  const {cart, price, setCart, RemoveItem} = useContext(CartContext);
+  const navigate = useNavigate();
+  let isLoading = false;
 
   const [buyer, setBuyer] = useState({
     firstname: "",
@@ -16,7 +21,6 @@ export default function Checkout() {
     phone: "",
     adress: "",
     zipcode: "",
-    card: "",
   })
 
   const handleInputChange = (e) => {
@@ -26,19 +30,37 @@ export default function Checkout() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const order = {
-      buyer,
-      cart,
-      price
+    if(cart.length >=1){
+      const order = {
+        buyer,
+        cart,
+        price
+      }
+      isLoading = true;
+      addOrder(order);
+    }else{
+      Swal.fire({
+        icon: "error",
+        title: "Your cart is empty, add something."
+      }).then((result) => {
+        if(result.isConfirmed){
+          navigate("/")
+        }
+      })
     }
-    addOrder(order);
-    setIsLoading(true)
-  };
+  }
 
   async function addOrder(order){
     const refOrder = collection(db, "orders")
     
-    addDoc(refOrder, order).then(({id}) => console.log(id)).finally(() => setIsLoading(false));
+    addDoc(refOrder, order).then((e) => {
+      Swal.fire({
+        icon: "success",
+        title: "Your purchase has been processed!",
+        text: ("your order ID is: " + `${e.id}`)
+      }
+      )
+    }).finally(() => isLoading = false);
 
     cart.forEach(e => {
       RemoveItem(e.id, e.cantidad)
@@ -53,7 +75,7 @@ export default function Checkout() {
     }
   };
 
-  return (
+  return isLoading != true ? (
     <div className={estilos.checkout}>      
           <form className={estilos.form} onSubmit={(e)=> handleSubmit(e)}>
             <div className={estilos.input_group}>
@@ -80,13 +102,19 @@ export default function Checkout() {
               <input className={estilos.input} required type="number" onKeyDown={handleKeyDown} id='zipcode' value={buyer.zipcode} onChange={handleInputChange}/>
               <label className={estilos.label} htmlFor="zipcode">Zip Code</label>
             </div>
-            <div className={estilos.input_group}>
+            {/* <div className={estilos.input_group}>
               <input className={estilos.input} required type="number" onKeyDown={handleKeyDown} id='card' value={buyer.card} onChange={handleInputChange}/>
               <label className={estilos.label} htmlFor="card">Credit/Debit Card</label>
-            </div>
+            </div> */}
             <button className={estilos.submit} type="submit">Finish Purchase</button>
           </form>
       <Subtotal/>
     </div>
+  ) : (
+    <section className={estilos.loader_container}>
+      <div className={estilos.loader}>
+      </div>      
+      <p className={estilos.loading_text}>Loading...</p>
+    </section>
   )
 }

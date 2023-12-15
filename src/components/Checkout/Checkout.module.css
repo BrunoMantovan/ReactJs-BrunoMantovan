@@ -1,13 +1,13 @@
 *{
     box-sizing: border-box;
 }
-
 .checkout{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 10%;
     width: 100%; 
     column-gap: 20px;
+    min-height: 100%;
 }
 .form{
     display: flex;
@@ -77,4 +77,52 @@ input:is(:focus, :valid) ~ label{
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
+}
+
+.loader_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #242424;
+}
+.loader{
+    height: 200px;
+    width: 200px;
+    border: 12px solid #e3e3e3;
+    border-right-color: var(--active-yellow);
+    border-radius: 50%;
+    animation: spin 1s ease infinite;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.loading_text{
+    margin-top: 20px;
+    font-family: var(--main-font);
+    font-size: 25px;
+    font-weight: 600;
+    color: #e3e3e3;
+}
+
+@media (max-width: 1024px) {
+    .checkout{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: end;
+        justify-self: end;
+        margin-bottom: 30px;
+    }
+    .submit{
+        height: 50px;
+    }
 }

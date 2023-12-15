@@ -36,3 +36,6 @@
 .remove:active{
     background-color: rgba(228, 111, 111, 0.69);
 }
+.not_show{
+    display: none;
+}

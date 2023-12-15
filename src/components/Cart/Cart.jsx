@@ -4,6 +4,7 @@ import estilos from "./Cart.module.css"
 
 import CartItem from '../CartItem/CartItem';
 import Subtotal from '../Subtotal/Subtotal';
+import { NavLink } from 'react-router-dom';
 export default function Cart() {
 
     const {cart, total, RemoveItem, setCart} = useContext(CartContext);
@@ -28,6 +29,11 @@ export default function Cart() {
             <Subtotal/>
         </div>
     ) : (
-        <p className={estilos.emptyTxt}>The cart is empty</p>
+        <div className={estilos.no_cart}>
+            <p className={estilos.emptyTxt}>The cart is empty</p>
+            <NavLink to={`/`} className={estilos.homeLink}>
+                <button className={estilos.homeBtn}>Continue shopping</button>
+            </NavLink>
+        </div>
     );
 }

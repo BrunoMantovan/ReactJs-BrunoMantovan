@@ -35,7 +35,7 @@
     height: 35px;
     border-style: none;
 }
-.buy{
+.buy, .buy_off{
     width: 100px;
     height: 60px;
     background-color: var(--yellow);
@@ -47,4 +47,8 @@
 }
 .buy:active{
     background-color: var(--active-yellow);
+}
+.buy_off{
+    background-color: rgba(158, 149, 20, 0.774);
+    cursor: none;
 }

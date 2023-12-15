@@ -14,7 +14,7 @@ export default function ItemCount(props) {
         numero >= 2 && setNumero(numero - 1)
     }
     function addToCart(){
-        const cartItem = {
+        if(props.stock >=1){const cartItem = {
             id,
             name,
             price,
@@ -22,6 +22,8 @@ export default function ItemCount(props) {
             cantidad: numero
         }
         addItem(cartItem);
+        setNumero(1);
+        }
     }
 
     return (
@@ -32,7 +34,7 @@ export default function ItemCount(props) {
                     <h3>{numero}</h3>
                     <button className={numero >=props.stock ? estilos.contador_button_off : estilos.contador_button} onClick={sumar}>+</button>
                 </div>
-                <button className={estilos.buy} onClick={addToCart}>Add to cart</button>
+                <button className={props.stock >=1 ? estilos.buy : estilos.buy_off} onClick={addToCart}>Add to cart</button>
             </div>
         </>
     )
