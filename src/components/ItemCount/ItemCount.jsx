@@ -3,7 +3,7 @@ import estilos from "./ItemCount.module.css"
 import { CartContext } from '../Context/CartContext'
 export default function ItemCount(props) {
 
-    const {cart, addItem} = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
     const {id, name, price, img} = props;
     const [numero, setNumero] = useState(1)
 
@@ -21,7 +21,6 @@ export default function ItemCount(props) {
             img,
             cantidad: numero
         }
-        const stock = props.stock;
         addItem(cartItem);
     }
 

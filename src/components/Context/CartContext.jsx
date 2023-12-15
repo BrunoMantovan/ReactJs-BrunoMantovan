@@ -7,16 +7,20 @@ export const CartContext = createContext();
 
 const CartContextComponent = ({children}) => {
 
-  const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const [price, setPrice] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [cart, setCart] = useState(() => {
+    const savedData = window.localStorage.getItem('cartData');
+    return savedData ? JSON.parse(savedData) : [];
+  });
+  
   useEffect(()=>{
     const newTotal = cart.reduce((acumulador, e) => acumulador + e.cantidad, 0);
     const newPrice = cart.reduce((acumulador, e) => acumulador + e.price, 0);
     setTotal(newTotal);
     setPrice(newPrice);
+    window.localStorage.setItem('cartData', JSON.stringify(cart));
   }, [cart])
 
 
@@ -41,18 +45,15 @@ const CartContextComponent = ({children}) => {
     await getDoc(itemRef).then((doc)=> item={id:doc.id, ...doc.data()})
     const newStock = (item.stock + quantity)
     batch.update(productRef, {"stock": newStock })
-    await batch.commit();
+    await batch.commit()
   };
-
-
+  
 
 
   function RemoveItem(id, quantity){
     const itemIndex = cart.findIndex(e => e.id == id);
     const newCart = [...cart.slice(0, itemIndex), ...cart.slice(itemIndex + 1)];
-    updateStock(id, quantity)
-    setCart(newCart);
-
+    updateStock(id, quantity).then(setCart(newCart))
   }
 
   return (
