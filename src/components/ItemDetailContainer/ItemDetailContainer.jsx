@@ -18,18 +18,16 @@ useEffect(()=>{
   const productsRef = query(collection(db, "productos"))
 
   getDocs(productsRef)  
-  .then(snapshot =>{console.log(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))
-  setProductArray(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))})
-    
+  .then(snapshot =>{setProductArray(snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})))})    
 }, [itemId, cart])
 
   return (
     <>
-        <div className={estilos.div}>
-          {ProductArray.filter(c =>itemId ? c.id == itemId : true).map((p)=>(
-            <ItemDetail key={p.id} img={p.img} name={p.name} price={p.cost_in_credits} stock={p.stock} model={p.model} crew={p.crew} passengers={p.passengers} length={p.length} manufacturer={p.manufacturer} id={p.id}/>
-          ))}
-        </div>
+      <div className={estilos.div}>
+        {ProductArray.filter(c =>itemId ? c.id == itemId : true).map((p)=>(
+          <ItemDetail key={p.id} img={p.img} name={p.name} price={p.cost_in_credits} stock={p.stock} model={p.model} crew={p.crew} passengers={p.passengers} length={p.length} manufacturer={p.manufacturer} id={p.id}/>
+        ))}
+      </div>
     </>
   )
 }

@@ -24,10 +24,11 @@ export default function ItemListContainer() {
     <div className={estilos.container_body}>
       <h1 className={estilos.titulo}> {categoryId ? categoryId : "rebel? imperial? Doesnt matter. if you have got the credit we sell it" }</h1>
         <div className={estilos.div}>
-          
+
           {productArray.filter(c => categoryId ? c.category == categoryId : true).map((p)=>(
             <ItemList key={p.model} img={p.img} name={p.name} price={p.cost_in_credits} stock={p.stock} id={p.id}/>
           ))}
+          
         </div>
     </div>
   )

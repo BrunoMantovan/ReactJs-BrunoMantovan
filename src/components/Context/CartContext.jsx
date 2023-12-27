@@ -58,7 +58,7 @@ const CartContextComponent = ({children}) => {
 
   return (
     <CartContext.Provider value={{cart, total, addItem, price, RemoveItem, setCart, isLoading, setIsLoading}}>
-        {children}
+      {children}
     </CartContext.Provider>
   )
 }

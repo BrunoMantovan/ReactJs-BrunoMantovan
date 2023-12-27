@@ -25,9 +25,7 @@ export async function añadirProductos() {
   
         await addDoc(productosCollection, data);
   
-        console.log('Document successfully written!');
       } catch (error) {
-        console.error('Error writing document: ', error);
       }
     });
 }

@@ -11,9 +11,9 @@
 }
 .brand h1{
     font-size: 30px;
-  color: var(--yellow);
-  font-family: var(--sw-font);
-  letter-spacing: 2px;
+    color: var(--yellow);
+    font-family: var(--sw-font);
+    letter-spacing: 2px;
 }
 .info{
     color: #e3e3e3;
