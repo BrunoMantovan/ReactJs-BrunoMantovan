@@ -4,7 +4,7 @@
     align-items: center;
     background-color:khaki;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 2px;
     margin-bottom: 10px;
     position: relative;
     font-family: var(--main-font);
@@ -12,7 +12,7 @@
 .tarjeta img{
     width: 75px;
     height: 75px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 .tarjeta span{
     font-family: var(--symbols);

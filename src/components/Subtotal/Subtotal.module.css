@@ -1,6 +1,6 @@
 .subtotal{
     background-color: white;
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@
     height: 30px;
     cursor: pointer;
     background-color:var(--yellow);
-    border-radius: 4px;
+    border-radius: 2px;
     border: none;
     font-family: var(--main-font);
     font-weight: 600;
